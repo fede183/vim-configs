@@ -1,5 +1,5 @@
 require("plugins")
 require("mappings")
-
-require("nvim-tree").setup()
-
+require("treesitter-config")
+require("nvim-tree-config")
+require("lsp-config")
