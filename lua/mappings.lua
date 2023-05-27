@@ -6,3 +6,4 @@ vim.keymap.set("n", "<leader>s", builtin.live_grep, {})
 
 local api = require("nvim-tree.api")
 vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
+vim.keymap.set("n", "<leader>o", api.tree.focus, {})
