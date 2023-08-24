@@ -1,16 +1,13 @@
 #!/bash/sh
 
-sudo pacman -S ripgrep
+sudo pacman -Sy ripgrep
 
-PACKER=~/.local/share/nvim/site/pack/packer/start/packer.nvim
-[[ -f "$PACKER" ]] && rm "$PACKER"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 
 DIR=~/.config/nvim
 [[ -d "$DIR" ]] && rm -rf "$DIR"
 
 mkdir $DIR
 
-rsync -av --exclude=".*" nvim-exclusive/* $DIR
-
+rsync -av --exclude=".*" lua/ $DIRi
+rsync -av --exclude=".*" init.lua
