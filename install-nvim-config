@@ -13,7 +13,6 @@ DIR=~/.config/nvim
 
 mkdir $DIR
 
-cp -r lua/ $DIR
-cp init.lua $DIR
+cp -r nvim-exclusive/* $DIR
 
 echo 'nvim configuration installed !!'
