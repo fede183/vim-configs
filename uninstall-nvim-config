@@ -1,0 +1,13 @@
+#!/bash/sh
+
+yay -R neovim
+
+sudo pacman -R ripgrep
+
+PACKER_DIR=~/.local/share/nvim
+[ -f $PACKER_DIR ] && rm -rf "$PACKER_DIR"
+
+DIR=~/.config/nvim
+[ -d "$DIR" ] && rm -rf "$DIR"
+
+echo 'nvim uninstalled !!'

@@ -17,4 +17,4 @@ mkdir $DIR
 
 cp -r nvim-exclusive/* $DIR
 
-echo 'nvim configuration installed !!'
+echo 'nvim installed !!'

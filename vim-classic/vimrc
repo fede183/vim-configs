@@ -1,8 +1,15 @@
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+syntax on
+
 set number
 set hlsearch
+set incsearch
+
+set wildmenu
+set wildmode=list:longest
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 call plug#begin('~/.vim/plugged')
 
