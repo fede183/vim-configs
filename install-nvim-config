@@ -1,5 +1,7 @@
 #!/bash/sh
 
+yay nvim
+
 if ! pacman -Qs ripgrep > /dev/null ; then
 	sudo pacman -Sy ripgrep
 fi
