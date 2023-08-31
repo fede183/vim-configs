@@ -5,13 +5,14 @@ if ! pacman -Qs vim > /dev/null ; then
 fi
 
 DIR=~/
+VIMDIR=$DIR.vim
 
-cp -r vim-classic/. $DIR
+cp -r vim-classic/vimrc $DIR.vimrc
 
-[ -f $DIR.vim ] && rm -rf $DIR.vim
+[ -f $VIMDIR ] && rm -rf $VIMDIR
 
-mkdir -p $DIR.vim $DIR.vim/autoload $DIR.vim/backup $DIR.vim/colors $DIR.vim/plugged
+mkdir -p $VIMDIR $VIMDIR/autoload $VIMDIR/backup $VIMDIR/colors $VIMDIR/plugged
 
-curl -fLo $DIR.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo $VIMDIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo 'vim configuration installed !!'
