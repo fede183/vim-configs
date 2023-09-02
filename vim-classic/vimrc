@@ -53,10 +53,18 @@ function! GroffCompile()
 		return
 	endif
        		
-	execute '! groff -ms ' . file . ' -T pdf > ' . filename . '.pdf'
+	execute '! groff -ms ' . file . ' -T pdf > ' . filename . '.pdf && killall zathura'
+	
 	echom 'Groff compile succesfully'
 
 endfunction
 
 command GroffCompile call GroffCompile()
 
+" Autocommands
+
+let config_path = 'Projects/vim-configs/vim-classic/vimrc'
+let install_script_path = 'Project/vim-configs/install-vim-configs'
+
+au BufWritePost * echo 'shit happens'
+" au BufWritePost config_path execute '! bash ' . install_script_path
