@@ -1,5 +1,8 @@
+" Cursor for normal
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+" Setups
 
 syntax on
 
@@ -12,6 +15,8 @@ colorscheme ron
 set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+" Plugings
 
 call plug#begin('~/.vim/plugged')
 
@@ -29,7 +34,29 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+" Keymaps
 
 let mapleader = " "
 nnoremap <leader>f :NERDTreeFocus<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
+
+" Scripts
+
+function! GroffCompile()
+
+	let file = expand('%:f')
+	let filename = expand('%:r')
+	let filetype = expand('%:e')
+
+	if ! (filetype == 'ms')
+		echoerr 'the file type is invalid, should be .ms'
+		return
+	endif
+       		
+	execute '! groff -ms ' . file . ' -T pdf > ' . filename . '.pdf'
+	echom 'Groff compile succesfully'
+
+endfunction
+
+command GroffCompile call GroffCompile()
+
