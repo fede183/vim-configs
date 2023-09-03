@@ -63,8 +63,9 @@ command GroffCompile call GroffCompile()
 
 " Autocommands
 
-let config_path = 'Projects/vim-configs/vim-classic/vimrc'
-let install_script_path = 'Project/vim-configs/install-vim-configs'
+let vim_configs_path = '/home/federico/Projects/vim-configs'
+let config_path = vim_configs_path . '/vim-classic/vimrc'
+let install_script_path = vim_configs_path .'/install-vim-config'
+let current_file_absolutepath = expand('%:p')
 
-au BufWritePost * echo 'shit happens'
-" au BufWritePost config_path execute '! bash ' . install_script_path
+au BufWritePost * if current_file_absolutepath == config_path | execute '! bash ' . install_script_path | endif
