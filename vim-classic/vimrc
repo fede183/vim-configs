@@ -1,4 +1,10 @@
+source ~/.vim/scripts.vim
+source ~/.vim/autocommands.vim
+source ~/.vim/plugins.vim
+source ~/.vim/mappings.vim
+
 " Cursor for normal
+
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
@@ -16,56 +22,3 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-" Plugings
-
-call plug#begin('~/.vim/plugged')
-
-  	Plug 'preservim/nerdtree'
-
-  	Plug 'tpope/vim-commentary'
-  
-  	Plug 'maxboisvert/vim-simple-complete'
-  
-  	Plug 'rust-lang/rust.vim'
-
-	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-	Plug 'dense-analysis/ale'
-
-call plug#end()
-
-" Keymaps
-
-let mapleader = " "
-nnoremap <leader>f :NERDTreeFocus<CR>
-nnoremap <leader>e :NERDTreeToggle<CR>
-
-" Scripts
-
-function! GroffCompile()
-
-	let file = expand('%:f')
-	let filename = expand('%:r')
-	let filetype = expand('%:e')
-
-	if ! (filetype == 'ms')
-		echoerr 'the file type is invalid, should be .ms'
-		return
-	endif
-       		
-	execute '! groff -ms ' . file . ' -T pdf > ' . filename . '.pdf && killall zathura'
-	
-	echom 'Groff compile succesfully'
-
-endfunction
-
-command GroffCompile call GroffCompile()
-
-" Autocommands
-
-let vim_configs_path = '/home/federico/Projects/vim-configs'
-let config_path = vim_configs_path . '/vim-classic/vimrc'
-let install_script_path = vim_configs_path .'/install-vim-config'
-let current_file_absolutepath = expand('%:p')
-
-au BufWritePost * if current_file_absolutepath == config_path | execute '! bash ' . install_script_path | endif
