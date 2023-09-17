@@ -15,7 +15,7 @@ cp -r vim-classic/vimrc $DIR.vimrc
 
 for file in sources/*
 do
-	cp -r vim-classic/sources/$file $VIMDIR
+	cp -r vim-classic/$file $VIMDIR
 done
 
 curl -fLo $VIMDIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

@@ -9,7 +9,7 @@ fu! GroffCompile()
 		return
 	endif
        		
-       	execute '! groff -ms ' . file . ' -T pdf > ' . filename . '.pdf'
+       	execute '! tbl ' . file . ' | groff -ms -Tpdf | tee ' . filename . '.pdf >/dev/null'
 	
 	echom 'Groff compile succesfully'
 
