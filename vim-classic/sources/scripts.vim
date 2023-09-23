@@ -21,7 +21,7 @@ fu! GroffPreview()
 	let filetype = '.pdf'
 	let file = filename . filetype
 
-	execute '! zathura ' . file
+	silent execute '! zathura ' . file . ' &'
 	
 endfunction
 
