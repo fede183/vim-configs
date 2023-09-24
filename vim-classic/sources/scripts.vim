@@ -25,6 +25,15 @@ fu! GroffPreview()
 	
 endfunction
 
+fu! GroffModeOn()
+
+	augroup groff
+		au BufWritePost * if (expand('%:e') == 'ms') | execute GroffCompile() | endif
+	augroup END
+
+endfunction
+
+
 command GroffCompile call GroffCompile()
 command GroffPreview call GroffPreview()
-
+command GroffModeOn call GroffModeOn()
