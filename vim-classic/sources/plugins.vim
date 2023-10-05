@@ -8,8 +8,8 @@ call plug#begin('~/.vim/plugged')
   
   	Plug 'rust-lang/rust.vim'
 
-	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 	Plug 'dense-analysis/ale'
+
+	Plug 'junegunn/fzf.vim'
 
 call plug#end()
