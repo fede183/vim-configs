@@ -1,0 +1,20 @@
+#!/bash/sh
+
+if ! pacman -Qs vimb > /dev/null ; then
+	sudo pacman -Sy vimb
+fi
+
+VIMDIR=~/.config/vimb
+
+[ -f $VIMDIR ] && rm -rf $VIMDIR
+
+mkdir -p $VIMDIR
+
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+for file in $SCRIPTPATH/vimb-configs/*
+do
+	cp -r $file $VIMDIR
+done
+
+echo 'vimb installed !!'

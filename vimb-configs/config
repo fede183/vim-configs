@@ -1,0 +1,3 @@
+set home-page=duckduckgo.com
+set download-path=~/tmp/
+set webgl=true
