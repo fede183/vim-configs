@@ -6,7 +6,7 @@ fi
 
 VIMDIR=~/.config/vimb
 
-[ -f $VIMDIR ] && rm -rf $VIMDIR
+[ -d $VIMDIR ] && rm -rf $VIMDIR
 
 mkdir -p $VIMDIR
 
