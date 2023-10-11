@@ -12,4 +12,10 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'junegunn/fzf.vim'
 
+	Plug 'vim-test/vim-test'
+
+	Plug 'neovimhaskell/haskell-vim'
+
+	Plug 'haskell/stylish-haskell'
+
 call plug#end()
