@@ -17,7 +17,8 @@ set hlsearch
 set incsearch
 set hidden
 
-colorscheme ron
+colorscheme gruvbox8
+set bg=dark
 
 set wildmenu
 set wildmode=list:longest
