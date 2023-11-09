@@ -5,7 +5,7 @@ if ! pacman -Qs neovim > /dev/null ; then
 fi
 
 if ! pacman -Qs ripgrep > /dev/null ; then
-	sudo pacman -Sy ripgrep
+	sudo pacman -Sy ripgrep --noconfirm
 fi
 
 PACKER_DIR=~/.local/share/nvim/site/pack/packer/start/packer.nvim

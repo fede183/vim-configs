@@ -1,7 +1,7 @@
 #!/bash/sh
 
 if ! pacman -Qs vimb > /dev/null ; then
-	sudo pacman -Sy vimb
+	sudo pacman -Sy vimb --noconfirm
 fi
 
 VIMDIR=~/.config/vimb
