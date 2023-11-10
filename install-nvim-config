@@ -1,7 +1,7 @@
 #!/bash/sh
 
 if ! pacman -Qs neovim > /dev/null ; then
-	yay neovim-git --noconfirm
+	yay neovim-git --noconfirm --aur --answerclean All --answerdiff None
 fi
 
 if ! pacman -Qs ripgrep > /dev/null ; then
