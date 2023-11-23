@@ -1,6 +1,6 @@
 #!/bash/sh
 
-yay -R neovim
+yay -R neovim-git
 
 sudo pacman -R ripgrep
 

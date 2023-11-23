@@ -4,7 +4,7 @@ endfunction
 
 let vim_configs_path = '/home/federico/Projects/vim-configs'
 let config_path = vim_configs_path . '/vim-classic'
-let install_script_path = vim_configs_path .'/install-vim-config'
+let install_script_path = vim_configs_path . '/install-vim-config'
 let current_file_absolutepath = expand('%:p')
 
 let config_path_for_vimb = vim_configs_path . '/vimb-configs'
