@@ -7,7 +7,7 @@ function GroffCompile()
 		vim.api.nvim_err_writeln('the file type is invalid, should be .ms')
 		return
 	end
-	
+
 	local groff_command = string.format('! groff -ms %s -T pdf > %s.pdf', file, filename)
 	vim.cmd(groff_command)
 end

@@ -4,6 +4,7 @@ require('treesitter-config')
 require('nvim-tree-config')
 require('lsp-config')
 require('scripts')
+require('autocommands')
 
 vim.opt.number = true
 vim.opt.hlsearch = true
