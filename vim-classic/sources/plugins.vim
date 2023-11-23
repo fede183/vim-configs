@@ -20,6 +20,4 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'haskell/stylish-haskell'
 
-	Plug 'epheien/termdbg'
-
 call plug#end()
