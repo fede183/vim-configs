@@ -3,7 +3,7 @@ fu! StartsWith(longer, shorter) abort
 endfunction
 
 let vim_configs_path = '/home/federico/Projects/vim-configs'
-let config_path = vim_configs_path . '/vim-classic'
+let config_path = vim_configs_path . '/vim-configs'
 let install_script_path = vim_configs_path . '/install-vim-config'
 let current_file_absolutepath = expand('%:p')
 

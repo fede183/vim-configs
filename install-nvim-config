@@ -17,6 +17,6 @@ DIR=~/.config/nvim
 
 mkdir $DIR
 
-cp -r nvim-exclusive/* $DIR
+cp -r nvim-configs/* $DIR
 
 echo 'nvim installed !!'

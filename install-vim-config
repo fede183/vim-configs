@@ -13,11 +13,11 @@ mkdir -p $VIMDIR $VIMDIR/autoload $VIMDIR/backup $VIMDIR/colors $VIMDIR/plugged
 
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-cp -r $SCRIPTPATH/vim-classic/vimrc $DIR.vimrc
+cp -r $SCRIPTPATH/vim-configs/vimrc $DIR.vimrc
 
 for file in sources/*
 do
-	cp -r $SCRIPTPATH/vim-classic/$file $VIMDIR
+	cp -r $SCRIPTPATH/vim-configs/$file $VIMDIR
 done
 
 curl -fLo $VIMDIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
