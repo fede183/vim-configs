@@ -9,8 +9,10 @@ require('autocommands')
 vim.opt.number = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.background = 'dark'
 
 vim.cmd('syntax on')
+vim.cmd('colorscheme gruvbox8')
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = 'list:longest'

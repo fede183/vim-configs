@@ -35,4 +35,9 @@ return require('packer').startup(function(use)
    }
  }
 
+ use  'lifepillar/vim-gruvbox8'
+ use  'tpope/vim-commentary'
+ use  'neovimhaskell/haskell-vim'
+ use  'haskell/stylish-haskell'
+
 end)
