@@ -8,10 +8,6 @@ if ! pacman -Qs ripgrep > /dev/null ; then
 	sudo pacman -Sy ripgrep --noconfirm
 fi
 
-PACKER_DIR=~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-[ -f $PACKER_DIR ] && git clone --depth 1 https://github.com/wbthomason/packer.nvim $PACKER_DIR 
-
 DIR=~/.config/nvim
 [ -d "$DIR" ] && rm -rf "$DIR"
 
