@@ -40,4 +40,12 @@ return require('packer').startup(function(use)
  use  'neovimhaskell/haskell-vim'
  use  'haskell/stylish-haskell'
 
+ use {
+	 'saecki/crates.nvim', 
+	 tag = 'stable',
+ 	 config = function() 
+		require('crates').setup()
+	 end,
+ }
+
 end)
