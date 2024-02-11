@@ -2,9 +2,9 @@ require('plugins')
 require('mappings')
 require('treesitter-config')
 require('nvim-tree-config')
-require('lsp-config')
 require('scripts')
 require('autocommands')
+require('lspsetups')
 
 vim.opt.number = true
 vim.opt.hlsearch = true
