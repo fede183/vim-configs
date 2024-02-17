@@ -13,6 +13,8 @@ DIR=~/.config/nvim
 
 mkdir $DIR
 
-cp -r nvim-configs/* $DIR
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+cp -r $SCRIPTPATH/nvim-configs/* $DIR
 
 echo 'nvim installed !!'
