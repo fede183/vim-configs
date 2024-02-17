@@ -4,7 +4,10 @@ require('treesitter-config')
 require('nvim-tree-config')
 require('scripts')
 require('autocommands')
-require('lspsetups')
+require('mason-configs')
+require('rust-tools-configs')
+require('lsp-configs')
+require('cmp-configs')
 
 vim.opt.number = true
 vim.opt.hlsearch = true
