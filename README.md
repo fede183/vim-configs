@@ -1,5 +1,8 @@
 Vim configs
 ===========
 
-# TODO:
-- complete the classic vim configs
+# For vim inspector
+- .vimspector.json copy to the rust project
+
+# TODO
+- Markdown for nvim
