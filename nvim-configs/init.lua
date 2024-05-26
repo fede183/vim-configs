@@ -8,6 +8,7 @@ require('mason-configs')
 require('rust-tools-configs')
 require('lsp-configs')
 require('cmp-configs')
+require('dap-config')
 
 vim.opt.number = true
 vim.opt.hlsearch = true
