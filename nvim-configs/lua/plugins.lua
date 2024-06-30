@@ -70,9 +70,12 @@ require("lazy").setup({
 	"hrsh7th/cmp-path",                            
 	"hrsh7th/cmp-buffer",                            
 	"hrsh7th/vim-vsnip",
-	-- "puremourning/vimspector",
 	"voldikss/vim-floaterm",
 
 	-- Lua
 	{"L3MON4D3/LuaSnip"},
+
+	-- DAP - Debugger
+	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+
 })
