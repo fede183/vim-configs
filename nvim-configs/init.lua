@@ -1,14 +1,14 @@
 require('plugins')
 require('mappings')
-require('treesitter-config')
-require('nvim-tree-config')
 require('scripts')
 require('autocommands')
-require('mason-configs')
-require('rust-tools-configs')
-require('lsp-configs')
-require('cmp-configs')
-require('dap-config')
+require('plugins_configs/treesitter-config')
+require('plugins_configs/nvim-tree-config')
+require('plugins_configs/mason-configs')
+require('plugins_configs/rust-tools-configs')
+require('plugins_configs/lsp-configs')
+require('plugins_configs/cmp-configs')
+require('plugins_configs/dap-config')
 
 vim.opt.number = true
 vim.opt.hlsearch = true
