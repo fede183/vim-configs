@@ -77,7 +77,6 @@ require("lazy").setup({
 	{"L3MON4D3/LuaSnip"},
 
 	-- DAP - Debugger
-
 	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
 
 })
