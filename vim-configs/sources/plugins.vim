@@ -10,6 +10,8 @@ call plug#begin('~/.vim/plugged')
   
   	Plug 'rust-lang/rust.vim'
 
+	Plug 'timonv/vim-cargo'
+
 	Plug 'dense-analysis/ale'
 
 	Plug 'junegunn/fzf.vim'
